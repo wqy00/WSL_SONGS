@@ -1,58 +1,62 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div style="height: 50px; line-height: 50px; border-bottom: 1px solid #ccc; display: flex;
+		align-items: center;
+		justify-content: center;">
+      <div style="position: absolute;width: 200px;left:560px;padding-left: 30px; font-weight: bold; color: dodgerblue">汪苏泷</div>
+      <div style="flex: 1"></div>
+      <div style="width: 100px">
+          <el-dropdown>
+              <span class="el-dropdown-link" >
+                  <br>
+                  <div>更多</div>
+                  
+
+            <el-icon class="el-icon--right">
+              <arrow-down />
+            </el-icon>
+
+              </span>
+              <template #dropdown>
+                  <el-dropdown-menu>
+                      <el-dropdown-item @click="person">个人信息</el-dropdown-item>
+                      <el-dropdown-item @click="logout">快乐</el-dropdown-item>
+                      <el-dropdown-item @click="logout">伤感</el-dropdown-item>
+                      <el-dropdown-item @click="logout">流行</el-dropdown-item>
+                      <el-dropdown-item @click="logout">古典</el-dropdown-item>
+<!--                        <el-dropdown-item disabled >切换</el-dropdown-item>-->
+<!--                        <el-dropdown-item divided>注册</el-dropdown-item>-->
+                  </el-dropdown-menu>
+              </template>
+          </el-dropdown>
+      </div>
+
+
   </div>
+
 </template>
 
-<script>
+<script >
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: "Header",
+  data(){
+      return{
+          user:{},
+      }
+  },
+  created(){
+
+  },
+
+  methods:{
+      logout(){
+      },
+      person(){
+      }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>
