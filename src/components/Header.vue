@@ -14,7 +14,7 @@
     <el-sub-menu index="2">
       <template #title>歌曲分类</template>
       <el-menu-item index="2-1" @click="topopular">流行</el-menu-item>
-      <el-menu-item index="2-2">情歌</el-menu-item>
+      <el-menu-item index="2-2" @click="toclassic">情歌</el-menu-item>
       <el-menu-item index="2-3">古典</el-menu-item>
 <!--      <el-sub-menu index="2-4">-->
 <!--        <template #title>item four</template>-->
@@ -53,6 +53,9 @@ export default {
     },
     topopular(){
       this.$router.push("/popular")
+    },
+    toclassic(){
+      this.$router.push("/classic")
     },
 
 

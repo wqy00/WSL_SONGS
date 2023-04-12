@@ -6,7 +6,7 @@ const routes = [
   path: '/',
   name: 'Layout',
   component: Layout,
-  // redirect: "/index",
+  redirect: "/index",
   children: [
     {
       path: '/index',
@@ -31,6 +31,14 @@ const routes = [
         title: 'popular',
       },
       component: () => import("@/views/songs/popular"),
+    },
+    {
+      path: '/classic',
+      name: 'classic',
+      meta: {
+        title: 'classic',
+      },
+      component: () => import("@/views/songs/classic"),
     },
   ]
 }
